@@ -41,7 +41,7 @@
             //                       |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp C_PLAY  &kp C_NEXT  &kp C_PREV      &kp C_MUTE       &kp C_VOL_DN   &kp C_VOL_UP                                     &kp PRINTSCREEN  &kp INSERT              &kp HOME                &kp DELETE            &kp CAPSLOCK             &caps_word
+&kp C_PLAY  &kp C_NEXT  &kp C_PREV      &kp C_MUTE       &kp C_VOL_DN   &kp C_VOL_UP                                     &kp PRINTSCREEN  &kp INSERT              &kp HOME                &kp DELETE            &kp CAPSLOCK             &kp LS(DELETE)
 &kp F1      &kp F2      &kp F3          &kp F4           &kp F5         &kp F6                                           &kp F7           &kp F8                  &kp F9                  &kp F10               &kp F11                  &kp F12
 &trans      &none       &none           &kp LC(Z)        &kp LS(LC(Z))  &kp LA(SLASH)                                    &kp PAGE_UP      &kp LEFT_ARROW          &kp DOWN_ARROW          &kp UP_ARROW          &kp RIGHT_ARROW          &kp PAGE_DOWN
 &trans      &none       &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH       &kp LA(LEFT_ARROW)  &kp LA(LC(T))    &kp LS(F5)  &kp RA(RIGHT)    &kp LS(LC(LEFT_ARROW))  &kp LS(LC(DOWN_ARROW))  &kp LS(LC(UP_ARROW))  &kp LS(LC(RIGHT_ARROW))  &kp RIGHT_SHIFT
