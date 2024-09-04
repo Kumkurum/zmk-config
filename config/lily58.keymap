@@ -43,7 +43,7 @@
             bindings = <
 &kp C_PLAY  &kp C_NEXT  &kp C_PREV      &kp C_MUTE       &kp C_VOL_DN   &kp C_VOL_UP                                     &kp PRINTSCREEN  &kp INSERT              &kp HOME                &kp DELETE            &kp CAPSLOCK             &kp RS(DELETE)
 &kp F1      &kp F2      &kp F3          &kp F4           &kp F5         &kp F6                                           &kp F7           &kp F8                  &kp F9                  &kp F10               &kp F11                  &kp F12
-&trans      &none       &none           &kp LC(Z)        &kp LS(LC(Z))  &kp LC(KP_SLASH)                                 &kp PAGE_UP      &kp LEFT_ARROW          &kp DOWN_ARROW          &kp UP_ARROW          &kp RIGHT_ARROW          &kp PAGE_DOWN
+&trans      &none       &kp UNDERSCORE  &kp LC(Z)        &kp LS(LC(Z))  &kp LC(KP_SLASH)                                 &kp PAGE_UP      &kp LEFT_ARROW          &kp DOWN_ARROW          &kp UP_ARROW          &kp RIGHT_ARROW          &kp PAGE_DOWN
 &trans      &none       &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp HASH       &kp LA(LEFT_ARROW)  &kp LA(LC(T))    &kp LS(F5)  &kp RA(RIGHT)    &kp LS(LC(LEFT_ARROW))  &kp LS(LC(DOWN_ARROW))  &kp LS(LC(UP_ARROW))  &kp LS(LC(RIGHT_ARROW))  &kp RIGHT_SHIFT
                                         &trans           &trans         &trans              &trans           &trans      &trans           &trans                  &kp RIGHT_GUI
             >;
@@ -60,11 +60,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans                &trans                 &trans          &trans         &trans                                    &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &kp EXCLAMATION       &kp AT_SIGN            &kp HASH        &kp DOLLAR     &trans                                    &kp N0       &kp N1        &kp N2        &kp N3        &kp STAR      &none
-&trans  &kp PERCENT           &kp LCTRL              &kp AMPERSAND   &kp ASTERISK   &kp PIPE                                  &kp MINUS    &kp N4        &kp N5        &kp N6        &kp SLASH     &trans
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp LESS_THAN  &kp GREATER_THAN  &trans       &trans     &kp KP_PLUS  &kp N7        &kp N8        &kp N9        &kp EQUAL     &trans
-                                                     &trans          &trans         &trans            &mkp LCLK    &mkp RCLK  &trans       &trans        &trans
+&trans  &trans           &trans                &trans                 &trans         &trans                                    &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp DOLLAR     &trans                                    &kp N0       &kp N1        &kp N2        &kp N3        &kp STAR      &none
+&trans  &kp PERCENT      &kp LCTRL             &kp AMPERSAND          &kp ASTERISK   &kp PIPE                                  &kp MINUS    &kp N4        &kp N5        &kp N6        &kp SLASH     &kp BACKSLASH
+&trans  &none            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &trans       &trans     &kp KP_PLUS  &kp N7        &kp N8        &kp N9        &kp EQUAL     &trans
+                                               &trans                 &trans         &trans            &mkp LCLK    &mkp RCLK  &trans       &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
