@@ -10,6 +10,29 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
+    macros {
+        pickWord: pickWord {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LEFT_ARROW) &kp RS(RC(RIGHT_ARROW))>;
+            label = "PICKWORD";
+        };
+
+        hideF: hideF {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(RIGHT_BRACE) &kp RS(RC(LEFT_BRACE)) &kp LC(KP_SLASH)>;
+            label = "HIDEF";
+        };
+
+        tabAll: tabAll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LC(I)>;
+            label = "TABALL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -60,24 +83,14 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans           &trans                &trans                 &trans         &trans                                    &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp DOLLAR     &trans                                    &kp N0       &kp N1        &kp N2        &kp N3        &kp STAR      &none
-&trans  &kp PERCENT      &kp LCTRL             &kp AMPERSAND          &kp ASTERISK   &kp PIPE                                  &kp MINUS    &kp N4        &kp N5        &kp N6        &kp SLASH     &kp BACKSLASH
-&trans  &none            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &trans       &trans     &kp KP_PLUS  &kp N7        &kp N8        &kp N9        &kp EQUAL     &trans
-                                               &trans                 &trans         &trans            &mkp LCLK    &mkp RCLK  &trans       &trans        &trans
+&tabAll  &trans           &trans                &trans                 &trans         &trans                                    &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans   &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp DOLLAR     &none                                     &kp N0       &kp N1        &kp N2        &kp N3        &kp STAR      &none
+&trans   &kp PERCENT      &kp LCTRL             &kp AMPERSAND          &kp ASTERISK   &kp PIPE                                  &kp MINUS    &kp N4        &kp N5        &kp N6        &kp SLASH     &kp BACKSLASH
+&trans   &none            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &pickWord    &hideF     &kp KP_PLUS  &kp N7        &kp N8        &kp N9        &kp EQUAL     &trans
+                                                &trans                 &trans         &trans            &mkp LCLK    &mkp RCLK  &trans       &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
         };
     };
 };
